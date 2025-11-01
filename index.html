@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PARA MI NIÑA <3</title>
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500&display=swap');
+
+
+
+    * {
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    html, body {
+
+      margin: 0;
+
+      padding: 0;
+
+      font-family: 'Roboto', sans-serif;
+
+      min-height: 100vh;
+
+      position: relative;
+
+      overflow-x: hidden;
+
+    }
+
+
+
+    /* 🌸 Fondo general */
+
+    body {
+
+      background-image: url('https://i.pinimg.com/736x/a3/b1/a0/a3b1a04b48c251b73c9b62ea5db54ee7.jpg');
+
+      background-size: cover;
+
+      background-position: center;
+
+      background-repeat: no-repeat;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      padding: 40px 20px;
+
+    }
+
+
+
+    /* 🍓 Fresas flotantes en todo el fondo */
+
+    body::before {
+
+      content: "";
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      background-image: url('https://images.icon-icons.com/1808/PNG/512/fruit-strawberry_115249.png');
+
+      background-size: 120px;
+
+      background-repeat: repeat;
+
+      opacity: 0.08;
+
+      animation: moverFresas 80s linear infinite;
+
+      z-index: -2;
+
+      pointer-events: none;
+
+    }
+
+
+
+    @keyframes moverFresas {
+
+      0% { background-position: 0 0; }
+
+      100% { background-position: 600px 1200px; }
+
+    }
+
+
+
+    .wrapper {
+
+      width: 100%;
+
+      max-width: 600px;
+
+    }
+
+
+
+    /* 💌 La carta */
+
+    .carta {
+
+      background: rgba(255, 182, 193, 0.85);
+
+      padding: 30px 25px;
+
+      border-radius: 20px;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+      width: 100%;
+
+      text-align: center;
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+
+
+    /* ✨ Fondo giratorio suave */
+
+    .carta::before {
+
+      content: '';
+
+      position: absolute;
+
+      width: 200%;
+
+      height: 200%;
+
+      top: -50%;
+
+      left: -50%;
+
+      background: radial-gradient(circle, rgba(255,192,203,0.2) 0%, transparent 70%);
+
+      animation: girar 20s linear infinite;
+
+      z-index: 0;
+
+    }
+
+
+
+    @keyframes girar {
+
+      0% { transform: rotate(0deg); }
+
+      100% { transform: rotate(360deg); }
+
+    }
+
+
+
+    /* 🍓 Fresas animadas dentro de la carta */
+
+    .carta::after {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      background-image: url('https://images.icon-icons.com/1808/PNG/512/fruit-strawberry_115249.png');
+
+      background-size: 100px;
+
+      background-repeat: repeat;
+
+      opacity: 0.08;
+
+      animation: moverFresasCarta 60s linear infinite;
+
+      z-index: 0;
+
+      pointer-events: none;
+
+    }
+
+
+
+    @keyframes moverFresasCarta {
+
+      0% { background-position: 0 0; }
+
+      100% { background-position: 400px 800px; }
+
+    }
+
+
+
+    .contenido {
+
+      position: relative;
+
+      z-index: 1; /* mantiene el texto sobre las fresitas */
+
+      color: #333;
+
+      line-height: 1.6;
+
+      font-size: 16px;
+
+    }
+
+
+
+    /* Firma con fuente elegante */
+
+    .contenido .firma {
+
+      margin-top: 30px;
+
+      font-family: 'Great Vibes', cursive;
+
+      font-size: 26px;
+
+      color: #d6336c;
+
+    }
+
+
+
+    /* Texto principal en Times New Roman cursiva */
+
+    .tipo {
+
+      font-family: "Times New Roman", Times, serif;
+
+      font-style: italic;
+
+      opacity: 0;
+
+      display: inline-block;
+
+    }
+
+
+
+    @media (min-width: 768px) {
+
+      .contenido { font-size: 18px; }
+
+      .contenido .firma { font-size: 28px; }
+
+      .carta { padding: 40px 50px; }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="carta">
+
+      <div class="contenido" id="textoCarta">
+
+        <p id="line1" class="tipo">Mi princesa linda</p>
+
+        <p id="line2" class="tipo">No quiero hacerte llorar por mi culpa, no qro q te sientas mal, lo siento mucho, pero esq siento mucho mucho te lo he dicho y me cuesta cambiar mis inseguridades, me he vuelto muy muy inseguro, perdon mi niña pensare y lo cambiare para que no te sientas mal, pq qro q sea yo, y tu seas, qro q seamos eternos, qro q de verdad nos casemos mi princesa hermosa q tengamos hijos, y q todos salgan con tus ojitos bonitos</p>
+
+        <p id="line3" class="tipo">De verdad siempre que me acuesto, cada que te espero, cada que me siento feliz o triste, pienso en ti, pienso en q te abrazo y te doy besitos, que te acaricio el pelo, q te abrazo fuerte y que te quedas dormidita en mi pechoo de verdad queee jdaw9s9ojdsadwa es lo que quieroooooo contigo eso y mucho mas mi princesa</p>
+
+        <p id="line4" class="tipo">Eres la mejor novia del mundo, la mejor mujer de todas, la mejor niña, qro que seas tu de verdad, qro q estemos juntos siempre, yo por ti me iria a vivir contigo pero pues soy pobre jdawodsjd y no tengo dinero, de verdad que quierooooooo</p>
+
+        <p id="line5" class="tipo">Intentare dar lo mejor posible, cambiare mis actitudes, no qro q sea aburrido, no qro q te vayas, no qro perderte, no qro q me dejes de amar, prometo que cambiare mis inseguridades :c</p>
+
+        <p id="line6" class="tipo">No qro ser un mal novio preciosa, se que lo soy, pero no no no qro, no qro q te aburra de mii, qro q siempre estes enamorada de mi, qro q me ames a mi siempre, qro q tu atencion sea toda miaaa, soy posesivo y celoso y perdon, perdoname por serlo</p>
+
+        <p id="line7" class="tipo">Me gustaria algun dia cuando tengamos nuestros hijitos, nos casemos, le contemos a nuestros hijosq estuvimos desde los 15 :3, qro q sepan que siempre fuiste, eres y seras la mujer de mi vida, de mis ojitos, de mi corazon</p>
+
+<p id="line8" class="tipo">Te pido perdon si he estado muy distante, seco, perdon si no veo q te hago daño, sobrepienso mucho mucho, ya no quiero que te vayas, ya no qro q le hables a hombres, ya no qro tampoco hacerte sentir mal, ya no qro ser toxico, ya no quiero ser tan mal novio, no lo hago pq me aburres o ya me aburriste, esq pq no quiero perderte, q le des atencion a otro hombre, ni qsubas fotitos mostrandotukuerponose JDAJKS pero bueno te lo dije y lasubistedenvo igual o dfoto de perfil waapq pues se q tienes hombres agregados meduele perdon, no tequiero perdeeeeer nunca mas, pq me imagino todo contigo y pq qro q se haga realidad perdon si soy inmaduro, no se amar, nunca he sentido tanto y jamas he querido casarme con nadie, me hace ilusion que algun dia llegue, pero tmb me da miedo q nunca llegue :(, no qro q te sientas insuficiente, qro q te sientas tratada como princesa, como reina, q te sientas amada, q te sientas segura de ti misma conmigo, que sepas que yo jamas te faltare al respeto, me burlaria de ti, jamas haria algo que no te gusta, que nada que ver, que te incomode por eso siempre trato de pensar en como hacerlo</p>   
+
+<p id="line9" class="tipo">De verdad que te amo un monton, con toda mi alma, con todo mi ser, no puedo explicarte lo mucho que te amo, que me gusta, q me encantas, no puedo con simples palabras, lo que siento por ti es demasiado es mucho mucho no te lo podrias imaginar mi niña, pero te juro que es muchoooooooo mucho infinito, eso y mas</p>    
+
+<p class="firma tipo" id="firma">[Edu]</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+
+    const lines = document.querySelectorAll('.tipo');
+
+    let delay = 0;
+
+
+
+    lines.forEach(line => {
+
+      setTimeout(() => {
+
+        line.style.opacity = 1;
+
+        line.style.transition = 'opacity 1s ease-in';
+
+      }, delay);
+
+      delay += 1000;
+
+    });
+
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
